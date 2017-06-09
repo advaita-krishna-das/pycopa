@@ -2,3 +2,5 @@
 setup.cfg
 setup.py
 pycopa/__init__.py
+pycopa/lexer.py
+pycopa/parser.py
