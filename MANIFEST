@@ -2,5 +2,7 @@
 setup.cfg
 setup.py
 pycopa/__init__.py
+pycopa/exception.py
 pycopa/lexer.py
 pycopa/parser.py
+pycopa/result.py

@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'pycopa',
   packages = ['pycopa'],
-  version = '0.2.1',
+  version = '0.3',
   description = 'A dead simple python module to parse command line arguments',
   author = 'Advaita Krishna das',
   author_email = 'advaita.krishna.das@gmail.com',

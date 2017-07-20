@@ -1,3 +1,7 @@
+from pycopa.exception import PycopaException
+from pycopa.result import ParserResult
+
+
 class Parser:
     __DEFAULT_ARG_NAME = "arg"
 
@@ -11,7 +15,7 @@ class Parser:
             value, cls = token
 
             if cls not in waiting_for_token:
-                raise Exception("Waiting for {} but {} given".format(" or ".join(waiting_for_token), cls))
+                raise PycopaException("Waiting for {} but {} given".format(" or ".join(waiting_for_token), cls))
 
             if cls == "command":
                 waiting_for_token = ["string", "arg"]
@@ -30,4 +34,4 @@ class Parser:
         for arg in args:
             result[arg] = result[arg].strip()
 
-        return result
+        return ParserResult(result)
